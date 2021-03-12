@@ -26,6 +26,15 @@ public class ProdutoController {
 		
 		return ResponseEntity.ok(produto);
 	}
+
+  	@PostMapping("/lotes")
+	  public ResponseEntity<List<Produto>> criarProdutoLote(@RequestBody List<Produto> listaProdutos) {
+      bancoDeDados.addAll(listaProdutos); 
+		
+		return ResponseEntity.ok(listaProdutos);
+	}
+
+
 	
 	@GetMapping("")
 	public ResponseEntity<List<Produto>> consultarProdutos() {

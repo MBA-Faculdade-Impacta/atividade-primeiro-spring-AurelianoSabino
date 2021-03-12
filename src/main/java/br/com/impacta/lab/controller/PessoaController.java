@@ -23,7 +23,7 @@ public class PessoaController {
 	@PostMapping("")
 	public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa pessoa) {
 		bancoDeDados.add(pessoa);
-		
+    
 		return ResponseEntity.ok(pessoa);
 	}
 	
